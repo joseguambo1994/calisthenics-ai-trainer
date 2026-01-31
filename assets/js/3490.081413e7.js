@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcalisthenics_ai_training_assistant=globalThis.webpackChunkcalisthenics_ai_training_assistant||[]).push([[3490],{3490(a,i,s){s.d(i,{createInfoServices:()=>n.v});var n=s(1885);s(7960)}}]);

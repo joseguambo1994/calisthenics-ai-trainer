@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcalisthenics_ai_training_assistant=globalThis.webpackChunkcalisthenics_ai_training_assistant||[]).push([[6366],{6366(i,a,s){s.d(a,{createArchitectureServices:()=>t.S});var t=s(8980);s(7960)}}]);

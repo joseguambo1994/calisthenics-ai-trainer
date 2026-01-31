@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcalisthenics_ai_training_assistant=globalThis.webpackChunkcalisthenics_ai_training_assistant||[]).push([[5742],{7093(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);

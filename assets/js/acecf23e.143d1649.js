@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcalisthenics_ai_training_assistant=globalThis.webpackChunkcalisthenics_ai_training_assistant||[]).push([[1903],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/calisthenics-ai-trainer/blog","blogTitle":"Blog","authorsListPath":"/calisthenics-ai-trainer/blog/authors"}')}}]);

@@ -1,0 +1,13 @@
+# Architecture
+
+Here is a Mermaid diagram:
+
+```mermaid
+flowchart LR
+  User[User] -->|WhatsApp video| WA[WhatsApp Cloud API]
+  WA --> N8N[n8n Workflow]
+  N8N --> Blob[Azure Blob Storage]
+  Blob --> CV[Pose Estimation Service]
+  CV --> FB[Feedback Generator]
+  FB --> WA
+```

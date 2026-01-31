@@ -29,7 +29,14 @@ const config: Config = {
   // Optional but recommended
   trailingSlash: true,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+
+   themes: ['@docusaurus/theme-mermaid'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -148,12 +155,10 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    themes: ['@docusaurus/theme-mermaid'],
+   
   // In order for Mermaid code blocks in Markdown to work,
   // you also need to enable the Remark plugin with this option
-    markdown: {
-      mermaid: true,
-    },
+
   } satisfies Preset.ThemeConfig,
 };
 

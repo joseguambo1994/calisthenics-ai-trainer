@@ -1,0 +1,36 @@
+# Architecture 2
+
+```mermaid
+flowchart LR
+
+%% ================= AZURE =================
+subgraph AZ["Azure"]
+  direction LR
+
+  APIM@{ img: "https://api.iconify.design/logos:microsoft-azure.svg", label: "API Management", pos: "b", w: 70, h: 70 }
+  APP@{ img: "https://api.iconify.design/logos:microsoft-azure.svg", label: "App / Server", pos: "b", w: 70, h: 70 }
+  SQL@{ img: "https://api.iconify.design/logos:microsoft-azure.svg", label: "Azure SQL", pos: "b", w: 70, h: 70 }
+  BLOB@{ img: "https://api.iconify.design/logos:microsoft-azure.svg", label: "Blob Storage", pos: "b", w: 70, h: 70 }
+
+  APIM --> APP
+  APP --> SQL
+  APP --> BLOB
+end
+
+%% ================= AWS =================
+subgraph AWS["AWS"]
+  direction TB
+
+  EC2@{ img: "https://api.iconify.design/logos:aws-ec2.svg", label: "EC2", pos: "b", w: 70, h: 70 }
+  RDS@{ img: "https://api.iconify.design/logos:aws-rds.svg", label: "RDS", pos: "b", w: 70, h: 70 }
+  S3@{ img: "https://api.iconify.design/logos:aws-s3.svg", label: "S3", pos: "b", w: 70, h: 70 }
+
+  EC2 --> RDS
+  RDS --> S3
+end
+
+%% ============== CROSS CLOUD ==============
+SQL --> RDS
+BLOB --> S3
+
+```

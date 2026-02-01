@@ -1,0 +1,29 @@
+---
+title: "Sprint 1 — ADR"
+sidebar_position: 1
+---
+
+# ADR-001 — Baseline synchronous architecture
+
+## Status
+Accepted
+
+## Context
+Sprint 1 needs a *working end-to-end* baseline for the Calisthenics AI Trainer. The priority is functional completeness and measurability, not optimization.
+
+## Decision
+Implement a simple synchronous baseline architecture:
+
+- A Web UI where the athlete uploads a video and requests feedback.
+- A Backend API that orchestrates the workflow.
+- An AI processing component (pose estimation + feedback generation) invoked synchronously by the API.
+- A Database to persist users, jobs, and results.
+
+## Consequences
+- ✅ Fast to implement; minimal moving parts.
+- ✅ Establishes a measurable baseline for performance/cost/capacity/security fitness functions.
+- ❌ Limited throughput; API latency increases with processing time.
+- ❌ Harder to scale horizontally without decoupling (addressed in later sprints).
+
+## Notes
+This ADR intentionally avoids queues, workers, and event-driven components in Sprint 1 to keep the baseline comparable.

@@ -1,0 +1,49 @@
+---
+title: "Sprint 1 — Metrics"
+sidebar_position: 3
+---
+
+# Sprint 1 — Metrics Report (Baseline)
+
+This report captures baseline measurements for the architecture fitness functions.
+
+## Fitness functions
+
+### 1) Time-to-feedback (performance)
+**Definition:** Time from user submission to feedback delivered.  
+**How to measure:** Track end-to-end duration (API request start → feedback response or notification).  
+**Target (baseline):** Establish reference values (P50/P95), not strict SLA.
+
+**Results**
+- P50: TBD
+- P95: TBD
+- Notes: TBD
+
+### 2) Cost per processed video (economic feasibility)
+**Definition:** Estimated cost to process one video end-to-end.  
+**How to measure:** Sum compute + storage + network + AI runtime cost per job (even if local/estimate).
+
+**Results**
+- Cost/video: TBD
+- Notes: TBD
+
+### 3) Sustained throughput under normal user load (capacity)
+**Definition:** Maximum stable videos/hour without breaching latency targets or error rate.  
+**How to measure:** Load test at increasing concurrency; observe error rate and latency.
+
+**Results**
+- Stable throughput: TBD videos/hour
+- Error rate: TBD
+- Notes: TBD
+
+### 4) Adversarial resistance (security)
+**Definition:** Resistance to prompt injection and confidential data leakage in the feedback pipeline.  
+**How to measure:** Attempt known prompt-injection patterns; verify no secrets are returned and unsafe instructions are ignored.
+
+**Results**
+- Injection blocked: TBD%
+- Leakage incidents: TBD
+- Notes: TBD
+
+## Summary
+Sprint 1 is a measurement baseline. Improvements in later sprints must increase at least one fitness function without causing unacceptable regressions in others.

@@ -1,0 +1,204 @@
+{
+  "configuration" : { },
+  "description" : "C4 diagrams exported as SVG",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2026-02-01T01:00:55Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Uploads videos and receives feedback",
+      "id" : "1",
+      "name" : "Athlete",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "3",
+        "id" : "7",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "2",
+        "id" : "8",
+        "linkedRelationshipId" : "7",
+        "sourceId" : "1"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "description" : "UI for upload and feedback",
+        "documentation" : { },
+        "id" : "3",
+        "name" : "Web App",
+        "properties" : {
+          "structurizr.dsl.identifier" : "web"
+        },
+        "relationships" : [ {
+          "description" : "Calls",
+          "destinationId" : "4",
+          "id" : "9",
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "React"
+      }, {
+        "description" : "Orchestration and backend",
+        "documentation" : { },
+        "id" : "4",
+        "name" : "API",
+        "properties" : {
+          "structurizr.dsl.identifier" : "api"
+        },
+        "relationships" : [ {
+          "description" : "Sends jobs/videos",
+          "destinationId" : "5",
+          "id" : "10",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Reads/Writes",
+          "destinationId" : "6",
+          "id" : "11",
+          "sourceId" : "4",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : ".NET 8"
+      }, {
+        "description" : "Pose estimation + feedback generation",
+        "documentation" : { },
+        "id" : "5",
+        "name" : "AI Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "ai"
+        },
+        "tags" : "Element,Container",
+        "technology" : "Python"
+      }, {
+        "description" : "Stores users/jobs/results",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "db"
+        },
+        "tags" : "Element,Container",
+        "technology" : "PostgreSQL"
+      } ],
+      "description" : "Analyzes videos and returns actionable feedback",
+      "documentation" : { },
+      "id" : "2",
+      "name" : "Calisthenics AI Trainer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "system"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Calisthenics AI Trainer - C4",
+  "properties" : {
+    "structurizr.inspection.info" : "0",
+    "structurizr.inspection.ignore" : "0",
+    "structurizr.inspection.error" : "10",
+    "structurizr.inspection.warning" : "0",
+    "structurizr.dsl" : "d29ya3NwYWNlICJDYWxpc3RoZW5pY3MgQUkgVHJhaW5lciAtIEM0IiAiQzQgZGlhZ3JhbXMgZXhwb3J0ZWQgYXMgU1ZHIiB7CiAgbW9kZWwgewogICAgdXNlciA9IHBlcnNvbiAiQXRobGV0ZSIgIlVwbG9hZHMgdmlkZW9zIGFuZCByZWNlaXZlcyBmZWVkYmFjayIKICAgIHN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJDYWxpc3RoZW5pY3MgQUkgVHJhaW5lciIgIkFuYWx5emVzIHZpZGVvcyBhbmQgcmV0dXJucyBhY3Rpb25hYmxlIGZlZWRiYWNrIiB7CiAgICAgIHdlYiA9IGNvbnRhaW5lciAiV2ViIEFwcCIgIlVJIGZvciB1cGxvYWQgYW5kIGZlZWRiYWNrIiAiUmVhY3QiCiAgICAgIGFwaSA9IGNvbnRhaW5lciAiQVBJIiAiT3JjaGVzdHJhdGlvbiBhbmQgYmFja2VuZCIgIi5ORVQgOCIKICAgICAgYWkgID0gY29udGFpbmVyICJBSSBTZXJ2aWNlIiAiUG9zZSBlc3RpbWF0aW9uICsgZmVlZGJhY2sgZ2VuZXJhdGlvbiIgIlB5dGhvbiIKICAgICAgZGIgID0gY29udGFpbmVyICJEYXRhYmFzZSIgIlN0b3JlcyB1c2Vycy9qb2JzL3Jlc3VsdHMiICJQb3N0Z3JlU1FMIgogICAgfQoKICAgIHVzZXIgLT4gd2ViICJVc2VzIgogICAgd2ViIC0+IGFwaSAiQ2FsbHMiCiAgICBhcGkgLT4gYWkgIlNlbmRzIGpvYnMvdmlkZW9zIgogICAgYXBpIC0+IGRiICJSZWFkcy9Xcml0ZXMiCiAgfQoKICB2aWV3cyB7CiAgICBzeXN0ZW1Db250ZXh0IHN5c3RlbSB7CiAgICAgIGluY2x1ZGUgKgogICAgICBhdXRvbGF5b3V0IGxyCiAgICB9CgogICAgY29udGFpbmVyIHN5c3RlbSB7CiAgICAgIGluY2x1ZGUgKgogICAgICBhdXRvbGF5b3V0IGxyCiAgICB9CiAgfQp9"
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "SystemContext-001",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : { },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 1419,
+        "width" : 3120
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 199,
+        "y" : 480
+      }, {
+        "id" : "3",
+        "x" : 949,
+        "y" : 480
+      }, {
+        "id" : "4",
+        "x" : 1699,
+        "y" : 480
+      }, {
+        "id" : "5",
+        "x" : 2449,
+        "y" : 780
+      }, {
+        "id" : "6",
+        "x" : 2449,
+        "y" : 180
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-001",
+      "name" : "Container View: Calisthenics AI Trainer",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "10"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "9"
+      } ],
+      "softwareSystemId" : "2"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 700,
+        "width" : 1600
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 200,
+        "y" : 160
+      }, {
+        "id" : "2",
+        "x" : 950,
+        "y" : 160
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "generatedKey" : true,
+      "key" : "SystemContext-001",
+      "name" : "System Context View: Calisthenics AI Trainer",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "8"
+      } ],
+      "softwareSystemId" : "2"
+    } ]
+  }
+}
